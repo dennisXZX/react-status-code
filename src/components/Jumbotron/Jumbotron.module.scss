@@ -1,0 +1,15 @@
+@import "../../style/theme";
+
+a {
+    text-decoration: none;
+}
+
+.jumbotron {
+    background-color: $darkGreen;
+    color: $grey;
+    outline: 1px dashed $grey;
+    outline-offset: -8px;
+    margin: 15px;
+    text-align: center;
+    padding: 25px;
+}
