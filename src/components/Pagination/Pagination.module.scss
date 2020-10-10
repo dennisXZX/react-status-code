@@ -1,0 +1,40 @@
+@import "../../style/theme";
+
+.pagination {
+    display: flex;
+    color: $grey;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.pageItem {
+    padding: 10px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 10px;
+    margin-right: 10px;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.highlight {
+    background-color: $darkGreen;
+    border-radius: 50%;
+}
+
+.arrow {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.disabled {
+    color: #4e4e4e;
+    cursor: default;
+}
