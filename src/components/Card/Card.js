@@ -17,15 +17,10 @@ const Card = props => {
                 className={`${styles.image}`}
                 style={{ backgroundImage: `url(${user?.avatar})` }}
             />
-            <div
-                className={`${styles.name}`}
-            >
+            <div className={`${styles.name}`}>
                 {user?.first_name} {user?.last_name}
             </div>
-
-            <div
-                className={`${styles.email}`}
-            >
+            <div className={`${styles.email}`}>
                 {user?.email}
             </div>
         </div>
