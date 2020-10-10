@@ -1,0 +1,23 @@
+@import "../../style/breakpoints";
+
+.actionBar {
+    margin: 0 15px;
+
+    button:first-of-type {
+        margin-bottom: 10px;
+    }
+    
+    @media (min-width: $breakpoint-tablet) {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            width: auto;
+        }
+
+        button:first-of-type {
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+    }
+}

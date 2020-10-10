@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from './ActionBar.module.scss';
+import Button from '../Button/Button';
 
-const ActionBar = () => {
+const ActionBar = props => {
+    const { shuffleCard, resetCard } = props;
+
     return (
         <div className={styles.actionBar}>
-            ActionBar
+            <Button onClick={shuffleCard}>SHUFFLE PAGE</Button>
+            <Button btnType="danger" onClick={resetCard}>RESET</Button>
         </div>
     );
 };

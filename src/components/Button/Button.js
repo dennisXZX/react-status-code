@@ -1,11 +1,27 @@
 import React from 'react';
+import classNames from 'classnames';
 import styles from './Button.module.scss';
 
-const Button = () => {
+const PRIMARY = 'primary';
+const DANGER = 'danger';
+
+const Button = props => {
+    const {
+        btnType = PRIMARY,
+        children,
+        className,
+        ...restProps
+    } = props;
+
+    const classes = classNames(styles.btn, className, {
+        [`${styles.primary}`]: btnType === PRIMARY,
+        [`${styles.danger}`]: btnType === DANGER
+    });
+
     return (
-        <div className={styles.button}>
-            Button
-        </div>
+        <button className={classes} {...restProps}>
+            {children}
+        </button>
     );
 };
 

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './App.module.scss';
 import Jumbotron from "../Jumbotron/Jumbotron";
 import {fetchUserData} from "../../utils";
+import ActionBar from '../ActionBar/ActionBar';
 
 const App= () => {
     const [advertisement, setAdvertisement] = useState(null);
@@ -18,12 +19,25 @@ const App= () => {
         fetchData()
     }, []);
 
+    const shuffleCard = () => {
+        console.log('shuffle');
+    };
+
+    const resetCard = () => {
+        console.log('reset');
+    };
+
     return (
         <div className={styles.app}>
             <Jumbotron
                 company={advertisement?.company}
                 url={advertisement?.url}
                 text={advertisement?.text}
+            />
+
+            <ActionBar
+                shuffleCard={shuffleCard}
+                resetCard={resetCard}
             />
         </div>
     );
